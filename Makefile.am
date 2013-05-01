@@ -1,0 +1,10 @@
+AUTOMAKE_OPTIONS = subdir-objects
+ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS} 
+AM_CPPFLAGS = $(DEPS_CFLAGS)
+bin_PROGRAMS = gtk_creator shell
+gtk_creator_SOURCES = src/gtk_container.cpp src/gtk_spinner.cpp src/bookmark_menu_item.cpp src/box_dialog.cpp src/code_widget.cpp src/compiler.cpp src/copy_function.cpp src/creator_main.cpp src/exit_save_dialog.cpp src/file_run_dialog.cpp src/find_dialog.cpp src/find_in_file_dialog.cpp src/find_replace_dialog.cpp src/focused_widget.cpp src/frame.cpp src/gtk_box.cpp src/gtk_button.cpp src/gtk_combobox.cpp src/gtk_entry.cpp src/gtk_eventbox.cpp src/gtk_fixed.cpp src/gtk_frame.cpp src/gtk_gui_main.c src/gtk_hbox.cpp src/gtk_hscrollbar.cpp src/gtk_label.cpp src/gtk_menubar.cpp src/gtk_menu_item.cpp src/gtk_notebook.cpp src/gtk_offscreenwindow.cpp src/gtk_placeholder.cpp src/gtk_progressbar.cpp src/gtk_scrollwin.cpp src/gtk_spinbutton.cpp src/gtk_table.cpp src/gtk_textview.cpp src/gtk_toolbar.cpp src/gtk_tool_button.cpp src/gtk_treeview.cpp src/gtk_vbox.cpp src/gtk_vscale.cpp src/gtk_window.cpp src/helper_functions.cpp src/main.cpp src/main_window.cpp src/menubar_editor.cpp src/new_project_dialog.cpp src/object_box.cpp src/options_dialog.cpp src/page_common.cpp src/page_general.cpp src/page_packing.cpp src/project_class.cpp src/project_preferenes_dialog.cpp src/project_save_as_dialog.cpp src/property_editor.cpp src/reg_exp_search_dialog.cpp src/runvte.cpp src/source_view.cpp src/stock_functions.cpp src/toolbar_editor.cpp src/toolbox.cpp src/tree.cpp src/treeitem.cpp
+gtk_creator_LDADD = $(DEPS_LIBS) -lpthread
+gtk_creator_CXXFLAGS = -O0 -J8
+shell_SOURCES = src/shell.c
+shell_LDADD = $(DEPS_LIBS) -lpthread
+dist_noinst_SCRIPTS = autogen.sh
